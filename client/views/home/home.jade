@@ -1,4 +1,6 @@
 h3 Home
 
-div(jj-greeting name= 'bob')
 
+div(ng-repeat='person in people', jj-greeting, name='{{person.name}}', age='{{person.age}}')
+
+div(cm-clock)
