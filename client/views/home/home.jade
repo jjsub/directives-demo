@@ -1,6 +1,12 @@
 h3 Home
 
 
-div(ng-repeat='person in people', jj-greeting, name='{{person.name}}', age='{{person.age}}')
+div(ng-repeat='s in symbols',jj-stock,symbol='{{s}}')
 
-div(cm-clock)
+div(jj-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}')
+
+div(jj-clock, frequency='2000')
+div(jj-clock, frequency='1000')
+div(jj-clock, frequency='500')
+div(jj-clock, frequency='250')
+div(jj-clock, frequency='10')
