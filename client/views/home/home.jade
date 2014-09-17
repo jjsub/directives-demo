@@ -1,6 +1,10 @@
 h3 Home
 
 
+div(jj-weather, zip'10002')
+div(jj-weather, zip'10005')
+div(jj-weather, zip'37203')
+
 div(ng-repeat='s in symbols',jj-stock,symbol='{{s}}')
 
 div(jj-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}')
