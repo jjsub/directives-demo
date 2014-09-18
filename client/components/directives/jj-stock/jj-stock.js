@@ -23,7 +23,7 @@
     o.controller  =  ['$scope', 'StockApi', function($scope, StockApi){
                        function getQuote(){
                          StockApi.quote($scope.symbol).then(function(response){
-                           $scope.quote = response.data.LastPrice;
+                           $scope.quote = response.data.Timestamp;
                          });
                        }
                        $scope.id = $interval(getQuote, 30000);
