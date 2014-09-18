@@ -1,5 +1,19 @@
 h3 Home
 
+input(type='text', ng-model='title')
+button(ng-click='addMovie()') Add Movie
+
+div
+
+div(jj-movie, ng-repeat = 'title in titles', title='{{title}}', remove='delMovie($index)')
+
+div
+
+div(jj-movie, title='The Hobbit')
+div(jj-movie, title='Star Wars')
+div(jj-movie, title='Lion King')
+
+
 div
 
 div(jj-weather, zip='10002')
@@ -21,7 +35,3 @@ div(jj-clock, frequency='250')
 div(jj-clock, frequency='10')
 
 div
-
-div(jj-movie, title='The Hobbit')
-div(jj-movie, title='Star Wars')
-div(jj-movie, title='Lion King')
