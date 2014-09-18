@@ -1,15 +1,18 @@
 h3 Home
 
+div
 
 div(jj-weather, zip='10002')
 div(jj-weather, zip='10005')
 div(jj-weather, zip='37203')
 
+div
 
 div(ng-repeat='s in symbols',jj-stock,symbol='{{s}}')
 
 div(jj-greeting, ng-repeat='person in people', name='{{person.name}}', age='{{person.age}}', from='{{person.from}}')
 
+div
 
 div(jj-clock, frequency='2000')
 div(jj-clock, frequency='1000')
@@ -17,6 +20,7 @@ div(jj-clock, frequency='500')
 div(jj-clock, frequency='250')
 div(jj-clock, frequency='10')
 
+div
 
 div(jj-movie, title='The Hobbit')
 div(jj-movie, title='Star Wars')
