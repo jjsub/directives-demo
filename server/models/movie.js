@@ -3,12 +3,17 @@
 //var bcrypt = require('bcrypt'),
   //  Mongo  = require('mongodb');
 
-function User(){
+function Movie(){
 }
 
-Object.defineProperty(User, 'collection', {
-  get: function(){return global.mongodb.collection('users');}
+Object.defineProperty(Movie, 'collection', {
+  get: function(){return global.mongodb.collection('movies');}
 });
 
-module.exports = User;
+Movie.create = function(o, cb){
+  Movie.collection.save(o,cb);
+};
+
+
+module.exports = Movie;
 

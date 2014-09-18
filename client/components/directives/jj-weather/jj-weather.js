@@ -21,10 +21,21 @@
                       };
 
     o.controller  =  ['$scope', 'WeatherApi', function($scope, WeatherApi){
+                       $scope.$on('position', function(event, pos){
+                         if($scope.zip){return;}
+                         console.log('i am the weather ', pos);
+                         var query = pos.coords.latitude +','+ pos.coords.longitude;
+                         weather(query);
+                       });
+
+                      function getConditions(query){
                         WeatherApi.conditions($scope.zip).then(function(response){
                           $scope.temperature = response.data.current_observation.temp_f;
                           $scope.icon = response.data.current_observation.icon_url;
-                      });
+                        });
+
+                      }
+                      if($scope.zip){getConditions($scope.zip);}
                     }];
     return o;
   }]);

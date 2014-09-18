@@ -5,11 +5,11 @@
   angular.module('directives-demo')
   .factory('Movie', ['$http', function($http){
 
-    function getMessage(){
-      return $http.get('/home');
+    function create(title){
+      return $http.post('/movies', {title:title});
     }
 
-    return {getMessage:getMessage};
+    return {create:create};
   }]);
 })();
 
