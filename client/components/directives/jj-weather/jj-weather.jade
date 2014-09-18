@@ -1,2 +1,9 @@
-span {{temperature}}&deg;
-img(ng-src='{{icon}}')
+h1 Movie
+div {{movie.year}}
+img(ng-src='{{poster}}')
+div {{movie.title}}
+div {{movie.synopsis}}
+ul
+  li(ng-repeat='cast in movie.abridged_cast') {{cast.name}}
+
+div {{movie.ratings.critis_rating}}

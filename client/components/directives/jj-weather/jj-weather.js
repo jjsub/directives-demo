@@ -22,7 +22,6 @@
 
     o.controller  =  ['$scope', 'WeatherApi', function($scope, WeatherApi){
                         WeatherApi.conditions($scope.zip).then(function(response){
-                          console.log(response);
                           $scope.temperature = response.data.current_observation.temp_f;
                           $scope.icon = response.data.current_observation.icon_url;
                       });
